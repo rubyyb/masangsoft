@@ -1,0 +1,466 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#wrap {
+    position: relative;
+    background: #1d1210;
+    min-width: 1325px;
+}
+#wrap .main .inner .main_img .main_light {
+    width: 100%;
+    height: 952px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/main_01.jpg) center 0 no-repeat;
+}
+#wrap .main .inner .main_img .main_shadow {
+    width: 100%;
+    height: 952px;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/shadow-main.png) center 0 no-repeat;
+}
+#wrap .main .inner .main_img .main_header {
+    width: 100%;
+    height: 80px;
+}
+#wrap .main .inner .main_img .main_header .header_logo {
+    width: 1280px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+}
+#wrap .main .inner .main_img .main_header .header_logo .cc_logo {
+    width: 109px;
+    height: 54px;
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: url(../img/logo.png) center 0 no-repeat;
+}
+#wrap .main .inner .main_img .main_header .header_logo .home_btn {
+    width: 60px;
+    height: 61px;
+    background: url(../img/홈_버튼_일반.png) center 0 no-repeat;
+    position: absolute;
+    top: 24px;
+    right: 170px;
+}
+#wrap .main .inner .main_img .main_header .header_logo .home_btn::before {
+    content: '';
+    width: 60px;
+    height: 61px;
+    background: url(../img/홈_버튼_hover.png) center no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+#wrap .main .inner .main_img .main_header .header_logo a:hover::before {
+    opacity: 1;
+}
+#wrap .main .inner .main_img .main_header .header_logo .stop_btn {
+    width: 180px;
+    height: 61px;
+    background: url(../img/그만보기_버튼_일qks.png);
+    position: absolute;
+    top: 24px;
+    right: 0;
+}
+#wrap .main .inner .main_img .main_header .header_logo .stop_btn::before {
+    content: '';
+    width: 180px;
+    height: 61px;
+    background: url(../img/그만보기_버튼_hover.png) no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+#wrap .main .inner .main_img .title {
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    z-index: 100;
+}
+
+#wrap .main .inner .main_img .title01 {
+    width: 877px;
+    height: 367px;
+    position: absolute;
+    top: 157px;
+    margin-left: -212px;
+    background: url(../img/title.png) no-repeat;
+    animation: opacity 2s forwards;
+}
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#wrap .main .inner .main_img .title02 {
+    width: 877px;
+    height: 144px;
+    background: url(../img/title-date.png) center no-repeat;
+    position: absolute;
+    top: 483px;
+    margin-left: -212px;
+    animation: opacity 2s 0.4s forwards;
+}
+#wrap .main .inner .main_img .title03 {
+    width: 877px;
+    height: 203px;
+    background: url(../img/글자.png) center no-repeat ;
+    position: absolute;
+    top: 584px;
+    margin-left: -212px;
+    animation: opacity 2s 0.8s forwards;
+}
+.tab_meun {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 935px;
+    z-index: 999;
+}
+.tab_meun ul {
+    width: 1313px;
+    margin: 0 auto;
+}
+.tab_meun ul li {
+    position: relative;
+    display: inline-block;
+    width: 230px;
+    height: 154px;
+    cursor: pointer;
+    margin: 0 -8px;
+}
+.tab_meun ul .tab:first-child {
+    background: url(../img/탭1-일방.png) no-repeat;
+}
+.tab_meun ul .tab:first-child.on {
+    background: url(../img/탭1-hover.png) no-repeat;
+}
+.tab_meun ul .tab:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/탭1-hover.png) no-repeat;
+    opacity: 0;
+}
+.tab_meun ul .tab:hover::before {
+    opacity: 1;
+}
+.tab_meun ul .tab:nth-child(2) {
+    background: url(../img/탭2-일방.png) no-repeat;
+}
+.tab_meun ul .tab:nth-child(2).on {
+    background: url(../img/탭2-hover.png) no-repeat;
+}
+.tab_meun ul li:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/탭2-hover.png) no-repeat;
+    opacity: 0;
+}
+.tab_meun ul li:nth-child(3) {
+    background: url(../img/탭3-일반.png) no-repeat;
+}
+.tab_meun ul li:nth-child(3).on {
+    background: url(../img/탭3-hover.png) no-repeat;
+}
+.tab_meun ul li:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/탭3-hover.png) no-repeat;
+    opacity: 0;
+}
+.tab_meun ul li:nth-child(4) {
+    background: url(../img/탭4-일반.png) no-repeat;
+}
+.tab_meun ul li:nth-child(4).on {
+    background: url(../img/탭4-hover.png) no-repeat;
+}
+.tab_meun ul li:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/탭4-hover.png) no-repeat;
+    opacity: 0;
+}
+.tab_meun ul li:nth-child(5) {
+    background: url(../img/탭5-일반.png) no-repeat;
+}
+.tab_meun ul li:nth-child(5).on {
+    background: url(../img/탭5-hover.png) no-repeat;
+}
+.tab_meun ul li:nth-child(5)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/탭5-hover.png) no-repeat;
+    opacity: 0;
+}
+.tab_meun ul li:nth-child(6) {
+    background: url(../img/탭6-일반.png) no-repeat;
+}
+.tab_meun ul li:nth-child(6).on {
+    background: url(../img/탭6-hover.png) no-repeat;
+}
+.tab_meun ul li:nth-child(6)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/탭6-hover.png) no-repeat;
+    opacity: 0;
+}
+.tabcontent {
+    width: 100%;
+    height: 3173px;
+    position: absolute;
+    top: 869px;
+    display: none;
+}
+.tabcontent.on {display: block;}
+#event01 {
+    position: relative;
+    background: url(../img/tab01.jpg) center no-repeat;
+    height: 3172px;
+}
+#event01 a.btn_guide {
+    width: 155px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 605px;
+    right: 574px;
+    cursor: pointer;
+}
+#event01 p.btn_gift {
+    width: 147px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+    top: 808px;
+    right: 829px;
+    cursor: pointer;
+}
+.btn_gift_popup {
+    width: 100%;
+    height: 100%;
+    background: url(../img/팝업_특별한선물.png) center no-repeat;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+    background-color: #00000060;
+    display: none;
+}
+.btn_gift_popup .gift_popup_close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -303px;
+    margin-left: 567px;
+    cursor: pointer;
+    display: none;
+}
+.coupon_box {
+    position: relative;
+    top: 868px;
+    left: 50.8%;
+    margin-left: -487px;
+    width: 945px;
+    height: 81px;
+    background: url(../img/쿠폰입력_btn.png)center 0 no-repeat;
+}
+.coupon_box .coupon_num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 638px;
+    height: 69px;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    background: inherit;
+    text-align: center;
+}
+.coupon_box .coupon_botton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    width: 289px;
+    height: 69px;
+    cursor: pointer;
+}
+.popup_bg {
+    width: 100%;
+    height: 100%;
+    background: #00000060;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.login_popup {
+    width: 600px;
+    height: 252px;
+    background-color: #fff;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border: 1px solid #1c1412;
+    z-index: 999;
+    display: none;
+}
+.login_close {
+    width: 100px;
+    height: 50px;
+    background: #1c1412;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    margin: 50px auto 0;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login_popup .login_title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70px;
+}
+.consent {
+    position: relative;
+    top: 866px;
+    left: 497px;
+    display: inline-block;
+}
+.consent .consent_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 119px;
+    height: 27px;
+    margin-left: 201px;
+}
+#event02 {
+    position: relative;
+    background: url(../img/tab2_02.jpg) center no-repeat;
+    height: 5862px;
+}
+#event03 {
+    position: relative;
+    background: url(../img/tab3_02.jpg) center no-repeat;
+    height: 3395px;
+}
+#event04 {
+    position: relative;
+    background: url(../img/tab4_02.jpg) center no-repeat;
+    height: 3820px;
+}
+#event04 .popup_cont01 {
+    position: absolute;
+    top: 965px;
+    left: 50%;
+    margin-left: -124px;
+    width: 247px;
+    height: 34px;
+    cursor: pointer;
+}
+#event04 .popup_cont01 p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 281px;
+    height: 166px;
+    background: url(../img/팝업_응원버프.png) center no-repeat;
+    margin-top: -65px;
+    margin-right: -282px;
+    display: none;
+}
+#event04 .popup_cont01:hover p {display: block;}
+#event04 .popup_cont02:hover p {display: block;}
+#event04 .popup_cont02 {
+    position: absolute;
+    top: 1082px;
+    left: 50%;
+    margin-left: -137px;
+    width: 276px;
+    height: 36px;
+    cursor: pointer;
+}
+#event04 .popup_cont02 p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 863px;
+    height: 352px;
+    background: url(../img/팝업_행운듬뿡상자.png) center no-repeat;
+    margin-top: 30px;
+    margin-right: -417px;
+    display: none;
+}
+#event05 {
+    position: relative;
+    background: url(../img/tab5_02.jpg) center no-repeat;
+    height: 2868px;
+}
+#event06 {
+    position: relative;
+    background: url(../img/tab6_02.jpg) center no-repeat;
+    height: 3770px;
+}
+.top_btn .top {
+    width: 83px;
+    height: 59px;
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    background: url(../img/btn_top.png) center no-repeat;
+    cursor: pointer;
+    display: none;
+}
